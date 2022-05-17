@@ -59,3 +59,17 @@ th {
   color: white;
   font-family: georgia;
 }
+
+.btnpesq {
+  background-color: #1b1e24; /* black */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
