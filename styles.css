@@ -34,13 +34,18 @@ body {
   width: 45%;
 }
 
-h2{
-  font-family:georgia;
-  margin-left: auto;
-  margin-right: auto;
+.btnpesq{
+  background-color: #1b1e24; /* black */
+  border: none;
+  color: white;
+  padding: 12px 20px;
   text-align: center;
-  background-color: teal;
-  color: #f0ffff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 td,
@@ -60,16 +65,3 @@ th {
   font-family: georgia;
 }
 
-.btnpesq{
-  background-color: #1b1e24; /* black */
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-}
