@@ -69,7 +69,7 @@ if(j < (numOfCols - 1)){//begin if then
   
   }//end outer for loop
 
-   //add the closing ] array bracket
+   //add the closing ']' array bracket
    objectArray.push("]");
   
   return objectArray.join("");
