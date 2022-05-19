@@ -1,3 +1,69 @@
+// --------------------------------  Gerar casos de testes com CPF's válidos -------------------------------------//
+function gerarCpf() {
+  const n1 = aleatorio(), n2 = aleatorio(), n3 = aleatorio(), d1 = dig(n1, n2, n3);
+  return `${n1}${n2}${n3}${d1}${dig(n1, n2, n3, d1)}`;
+}
+
+function dig(n1, n2, n3, n4) { 
+  let nums = n1.split("").concat(n2.split(""), n3.split(""), [n4]), x = 0;  
+  for (let i = (n4 !== undefined ? 11:10), j = 0; i >= 2; i--, j++) x += +nums[j] * i;
+  return (y = x % 11) < 2 ? 0 : 11 - (y = x % 11); 
+}
+
+const aleatorio = () => ("" + Math.floor(Math.random() * 999)).padStart(3, '0');
+
+document.getElementById("cpf1").value = gerarCpf();
+document.getElementById("cpf2").value = gerarCpf();
+document.getElementById("cpf3").value = gerarCpf();
+document.getElementById("cpf4").value = gerarCpf();
+document.getElementById("cpf5").value = gerarCpf();
+document.getElementById("cpf6").value = gerarCpf();
+document.getElementById("cpf7").value = gerarCpf();
+
+
+// Função que gera número aleatório, utilizado nas duas funções abaixo
+function numeroaleatorio(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// --------------------------------  Gerar casos de testes com Nomes ---------------------------------------------//
+function gerarNome() {
+  var nomes = ['Gustavo Damasceno', 'Mateus Oliveira', 'Ricardo Pereira', 'José Silva', 'João Lins', 'Jonas Bezerra', 
+  'Gabriel Campos', 'Lucas Pontes', 'Vinicius Cantante', 'Pedro Sgobi', 'Marcelo Lins', 'João Herz', 'Cláudio Hubermann', 
+  'Tiago Silva', 'Leandro Nascimento', 'Marcos Weitz', 'Pablo Santos', 'Renan Rocha', 'Daniela Pereira', 'Daniela Carvalho',
+  'Rodrigo Costa', 'Fernando Moura', 'Renan Souza', 'Marcelo Martins', 'Halana Silvana', 'Cesár Augusto'];
+ 
+  return nomes[numeroaleatorio(0, 25)];
+}
+
+document.getElementById("nome1").value = gerarNome();
+document.getElementById("nome2").value = gerarNome();
+document.getElementById("nome3").value = gerarNome();
+document.getElementById("nome4").value = gerarNome();
+document.getElementById("nome5").value = gerarNome();
+document.getElementById("nome6").value = gerarNome();
+document.getElementById("nome7").value = gerarNome();
+
+// --------------------------------  Gerar casos de testes com Cidades ---------------------------------------------//
+
+function gerarCidade() {
+  var cidades = ['Fortaleza', 'Mossoró', 'Teresina', 'Natal', 'Sobral', 'Quixadá', 'Juazeiro do Norte', 'Quixeramobim',
+  'Eusebio'];
+ 
+  return cidades[numeroaleatorio(0, 8)];
+}
+
+document.getElementById("cidade1").value = gerarCidade();
+document.getElementById("cidade2").value = gerarCidade();
+document.getElementById("cidade3").value = gerarCidade();
+document.getElementById("cidade4").value = gerarCidade();
+document.getElementById("cidade5").value = gerarCidade();
+document.getElementById("cidade6").value = gerarCidade();
+document.getElementById("cidade7").value = gerarCidade();
+
+// --------------------------------  Converter FORM para JSON ---------------------------------------------//
 function formToJSON(table){//begin function
 
 //array to hold the key name
@@ -88,3 +154,6 @@ $("#test-form").on("submit",function(e){
 $("#results").val(formToJSON(table));  
   
 });
+
+
+
