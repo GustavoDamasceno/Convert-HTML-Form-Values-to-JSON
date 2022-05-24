@@ -18,10 +18,9 @@ document.getElementById("cpf3").value = gerarCpf();
 document.getElementById("cpf4").value = gerarCpf();
 document.getElementById("cpf5").value = gerarCpf();
 document.getElementById("cpf6").value = gerarCpf();
-document.getElementById("cpf7").value = gerarCpf();
 
 
-// Função que gera número aleatório, utilizado nas duas funções abaixo
+// Função que gera número aleatório, utilizado nas funções abaixo
 function numeroaleatorio(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -44,7 +43,6 @@ document.getElementById("nome3").value = gerarNome();
 document.getElementById("nome4").value = gerarNome();
 document.getElementById("nome5").value = gerarNome();
 document.getElementById("nome6").value = gerarNome();
-document.getElementById("nome7").value = gerarNome();
 
 // --------------------------------  Gerar casos de testes com Cidades ---------------------------------------------//
 
@@ -61,7 +59,254 @@ document.getElementById("cidade3").value = gerarCidade();
 document.getElementById("cidade4").value = gerarCidade();
 document.getElementById("cidade5").value = gerarCidade();
 document.getElementById("cidade6").value = gerarCidade();
-document.getElementById("cidade7").value = gerarCidade();
+
+// --------------------------------  Gerar casos de testes com email ---------------------------------------------//
+
+function gerarEmail() {
+  var emails = ['eng.damasceno@alu.ufc.br', 'gustavo.de.damasceno@gmail.com', 'guilherme.silvadf@gmail.com', 
+  'casoteste@gmail.com', 'jonas_teste@gmail.com', 'gdcampos@solarbr.com.br', 'gustavo-de-campos@hotmail.com', 'jpsilcren@gmail.com',
+  'olivper_re@gmail.com', 'hisst_vnd@gmailcom', 'marceloisaer@gmail.com', 'palestra1234@gmail.com'];
+ 
+  return emails[numeroaleatorio(0, 8)];
+}
+
+document.getElementById("email1").value = gerarEmail();
+document.getElementById("email2").value = gerarEmail();
+document.getElementById("email3").value = gerarEmail();
+document.getElementById("email4").value = gerarEmail();
+document.getElementById("email5").value = gerarEmail();
+document.getElementById("email6").value = gerarEmail();
+
+// --------------------------------  Gerar casos de testes com data de nascimento ---------------------------------------------//
+function gerarData() {
+  const dia = numeroaleatorio(1, 30);
+  const mes = numeroaleatorio(1, 12);
+  const ano = numeroaleatorio(1975, 2002);
+
+  const data = dia + '/' + mes + '/' + ano;
+
+  return data;
+}
+
+document.getElementById("dataNascimento1").value = gerarData();
+document.getElementById("dataNascimento2").value = gerarData();
+document.getElementById("dataNascimento3").value = gerarData();
+document.getElementById("dataNascimento4").value = gerarData();
+document.getElementById("dataNascimento5").value = gerarData();
+document.getElementById("dataNascimento6").value = gerarData();
+
+// --------------------------------  Gerar casos de testes com data de Estado ---------------------------------------------//
+
+switch (document.getElementById("cidade1").value) {
+  case "Fortaleza":
+    document.getElementById("estado1").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado1").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado1").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado1").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado1").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado1").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado1").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado1").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado1").value = 'CE';
+    break;
+}
+
+switch (document.getElementById("cidade2").value) {
+  case "Fortaleza":
+    document.getElementById("estado2").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado2").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado2").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado2").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado2").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado2").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado2").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado2").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado2").value = 'CE';
+    break;
+}
+
+
+switch (document.getElementById("cidade3").value) {
+  case "Fortaleza":
+    document.getElementById("estado3").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado3").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado3").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado3").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado3").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado3").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado3").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado3").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado3").value = 'CE';
+    break;
+}
+
+
+switch (document.getElementById("cidade4").value) {
+  case "Fortaleza":
+    document.getElementById("estado4").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado4").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado4").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado4").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado4").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado4").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado4").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado4").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado4").value = 'CE';
+    break;
+}
+
+
+switch (document.getElementById("cidade5").value) {
+  case "Fortaleza":
+    document.getElementById("estado5").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado5").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado5").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado5").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado5").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado5").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado5").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado5").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado5").value = 'CE';
+    break;
+}
+
+
+switch (document.getElementById("cidade6").value) {
+  case "Fortaleza":
+    document.getElementById("estado6").value = 'CE';
+    break;
+  case "Mossoró":
+    document.getElementById("estado6").value = 'RN';
+    break;
+  case "Teresina":
+    document.getElementById("estado6").value = 'PI';
+    break;
+  case "Natal":
+    document.getElementById("estado6").value = 'RN';
+    break;
+  case "Sobral":
+    document.getElementById("estado6").value = 'CE';
+    break;
+  case "Quixadá":
+    document.getElementById("estado6").value = 'CE';
+    break;
+  case "Juazeiro do Norte":
+    document.getElementById("estado6").value = 'CE';
+    break;
+  case "Quixeramobim":
+    document.getElementById("estado6").value = 'CE';
+    break;
+  case "Eusebio":
+    document.getElementById("estado6").value = 'CE';
+    break;
+}
+// --------------------------------  Gerar casos de testes com empresa ---------------------------------------------//
+
+document.getElementById("empresa1").value = 'FFOR';
+document.getElementById("empresa2").value = 'FFOR';
+document.getElementById("empresa3").value = 'FFOR';
+document.getElementById("empresa4").value = 'FFOR';
+document.getElementById("empresa5").value = 'FFOR';
+document.getElementById("empresa6").value = 'FFOR';
+
+// --------------------------------  Gerar casos de testes com telefone ---------------------------------------------//
+
+function gerarTelefone(){
+  const ddd = numeroaleatorio(85, 88);
+  const firstgroup = numeroaleatorio(9880, 9989);
+  const secondgroup = numeroaleatorio(5679, 5799);
+
+  const number = ddd + '9' + firstgroup + secondgroup;
+
+  return number;
+}
+
+document.getElementById("telefone1").value = gerarTelefone();
+document.getElementById("telefone2").value = gerarTelefone();
+document.getElementById("telefone3").value = gerarTelefone();
+document.getElementById("telefone4").value = gerarTelefone();
+document.getElementById("telefone5").value = gerarTelefone();
+document.getElementById("telefone6").value = gerarTelefone();
 
 // --------------------------------  Converter FORM para JSON ---------------------------------------------//
 function formToJSON(table){//begin function
